@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +16,13 @@
 
     <header class="header">
 
-        <div class="logo">
-            <span>ZYNK</span>
-            <strong>.</strong>
-        </div>
+        <a href="#inicio" class="logo">
+            <img src="imagens/logo-zynk.png.png" alt="Zynk Automações">
+        </a>
 
         <nav>
             <a href="#inicio">Início</a>
-            <a href="#atuacao">Atuação</a>
-            <a href="#solucoes">Soluções</a>
+            <a href="#atuacao">Soluções</a>
             <a href="#projetos">Projetos</a>
             <a href="#historia">História</a>
             <a href="#contato">Contato</a>
@@ -72,7 +71,7 @@
         </div>
 
 
-        <!-- Elemento visual -->
+        <!-- ELEMENTO VISUAL -->
 
         <div class="hero-visual">
 
@@ -98,11 +97,12 @@
     </section>
 
 
+
     <!-- ================= ÁREAS DE ATUAÇÃO ================= -->
 
-    <section id="atuacao" class="section">
+    <section id="atuacao" class="sector-section">
 
-        <div class="section-header">
+        <div class="sector-header">
 
             <div>
 
@@ -111,8 +111,8 @@
                 </p>
 
                 <h2>
-                    Onde a Zynk
-                    <span>atua.</span>
+                    Tecnologia aplicada
+                    <span>à realidade.</span>
                 </h2>
 
             </div>
@@ -126,238 +126,312 @@
         </div>
 
 
-        <div class="services">
+        <!-- ================= ABAS ================= -->
 
-            <!-- RESIDENCIAL -->
+        <div class="sector-tabs" role="tablist">
 
-            <div class="service">
+            <button
+                class="sector-tab active"
+                type="button"
+                data-sector="residencial"
+                role="tab"
+                aria-selected="true">
 
-                <div class="service-number">
-                    01
+                <span class="tab-number">01</span>
+                Automação Residencial
+
+            </button>
+
+
+            <button
+                class="sector-tab"
+                type="button"
+                data-sector="industrial"
+                role="tab"
+                aria-selected="false">
+
+                <span class="tab-number">02</span>
+                Automação Industrial
+
+            </button>
+
+
+            <button
+                class="sector-tab"
+                type="button"
+                data-sector="sites"
+                role="tab"
+                aria-selected="false">
+
+                <span class="tab-number">03</span>
+                Desenvolvimento de Sites
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= ÁREA DOS SETORES ================= -->
+
+        <div class="sector-display">
+
+
+            <!-- ================= RESIDENCIAL ================= -->
+
+            <article
+                class="sector-panel active"
+                data-panel="residencial">
+
+                <video
+                    class="sector-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata">
+
+                    <source
+                        src="videos/residencial.mp4"
+                        type="video/mp4">
+
+                </video>
+
+
+                <div class="sector-overlay"></div>
+
+
+                <div class="sector-content">
+
+                    <div class="sector-top">
+
+                        <span class="sector-number">
+                            01
+                        </span>
+
+                        <span class="sector-category">
+                            ZYNK HOME
+                        </span>
+
+                    </div>
+
+
+                    <div class="sector-main-text">
+
+                        <p class="sector-small-title">
+                            AUTOMAÇÃO RESIDENCIAL
+                        </p>
+
+                        <h3>
+                            Uma casa que
+                            <span>entende você.</span>
+                        </h3>
+
+                        <p class="sector-description">
+                            A automação residencial permite integrar
+                            diferentes dispositivos da casa para criar
+                            ambientes mais inteligentes, confortáveis
+                            e eficientes.
+                        </p>
+
+
+                        <ul class="sector-list">
+
+                            <li>
+                                Iluminação inteligente
+                            </li>
+
+                            <li>
+                                Controle de ambientes
+                            </li>
+
+                            <li>
+                                Segurança
+                            </li>
+
+                            <li>
+                                Integração de dispositivos
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
 
-                <div class="service-icon">
-                    ⌂
+            </article>
+
+
+
+            <!-- ================= INDUSTRIAL ================= -->
+
+            <article
+                class="sector-panel"
+                data-panel="industrial">
+
+                <video
+                    class="sector-video"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata">
+
+                    <source
+                        src="videos/industrial.mp4"
+                        type="video/mp4">
+
+                </video>
+
+
+                <div class="sector-overlay"></div>
+
+
+                <div class="sector-content">
+
+                    <div class="sector-top">
+
+                        <span class="sector-number">
+                            02
+                        </span>
+
+                        <span class="sector-category">
+                            ZYNK INDUSTRY
+                        </span>
+
+                    </div>
+
+
+                    <div class="sector-main-text">
+
+                        <p class="sector-small-title">
+                            AUTOMAÇÃO INDUSTRIAL
+                        </p>
+
+                        <h3>
+                            Processos mais
+                            <span>inteligentes.</span>
+                        </h3>
+
+                        <p class="sector-description">
+                            Desenvolvemos soluções para automatizar,
+                            monitorar e integrar processos industriais,
+                            buscando mais eficiência e controle.
+                        </p>
+
+
+                        <ul class="sector-list">
+
+                            <li>
+                                Monitoramento
+                            </li>
+
+                            <li>
+                                Controle de processos
+                            </li>
+
+                            <li>
+                                Integração de sistemas
+                            </li>
+
+                            <li>
+                                Projetos personalizados
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
 
-                <h3>
-                    Automação Residencial
-                </h3>
-
-                <p>
-                    Transformamos casas em ambientes inteligentes,
-                    conectados e mais práticos.
-                </p>
-
-                <a href="#residencial">
-                    Saiba mais →
-                </a>
-
-            </div>
+            </article>
 
 
-            <!-- INDUSTRIAL -->
 
-            <div class="service featured">
+            <!-- ================= SITES ================= -->
 
-                <div class="service-number">
-                    02
+            <article
+                class="sector-panel"
+                data-panel="sites">
+
+                <video
+                    class="sector-video"
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata">
+
+                    <source
+                        src="videos/sites.mp4"
+                        type="video/mp4">
+
+                </video>
+
+
+                <div class="sector-overlay"></div>
+
+
+                <div class="sector-content">
+
+                    <div class="sector-top">
+
+                        <span class="sector-number">
+                            03
+                        </span>
+
+                        <span class="sector-category">
+                            ZYNK WEB
+                        </span>
+
+                    </div>
+
+
+                    <div class="sector-main-text">
+
+                        <p class="sector-small-title">
+                            DESENVOLVIMENTO DE SITES
+                        </p>
+
+                        <h3>
+                            Sua empresa na
+                            <span>internet.</span>
+                        </h3>
+
+                        <p class="sector-description">
+                            Desenvolvemos sites modernos e responsivos
+                            para empresas que desejam fortalecer sua
+                            presença digital.
+                        </p>
+
+
+                        <ul class="sector-list">
+
+                            <li>
+                                Sites institucionais
+                            </li>
+
+                            <li>
+                                Landing pages
+                            </li>
+
+                            <li>
+                                Design responsivo
+                            </li>
+
+                            <li>
+                                Projetos personalizados
+                            </li>
+
+                        </ul>
+
+                    </div>
+
                 </div>
 
-                <div class="service-icon">
-                    ◈
-                </div>
-
-                <h3>
-                    Automação Industrial
-                </h3>
-
-                <p>
-                    Aplicamos tecnologia para aumentar o controle,
-                    eficiência e produtividade dos processos.
-                </p>
-
-                <a href="#industrial">
-                    Saiba mais →
-                </a>
-
-            </div>
-
-
-            <!-- SITES -->
-
-            <div class="service">
-
-                <div class="service-number">
-                    03
-                </div>
-
-                <div class="service-icon">
-                    &lt;/&gt;
-                </div>
-
-                <h3>
-                    Desenvolvimento de Sites
-                </h3>
-
-                <p>
-                    Criamos sites modernos, responsivos e
-                    personalizados para empresas.
-                </p>
-
-                <a href="#sites">
-                    Saiba mais →
-                </a>
-
-            </div>
+            </article>
 
         </div>
 
     </section>
 
-
-    <!-- ================= SOLUÇÕES ================= -->
-
-    <section id="solucoes" class="solutions">
-
-        <div class="solutions-title">
-
-            <p class="tag">
-                NOSSAS SOLUÇÕES
-            </p>
-
-            <h2>
-                Tecnologia aplicada
-                <span>à realidade.</span>
-            </h2>
-
-        </div>
-
-
-        <!-- RESIDENCIAL -->
-
-        <article id="residencial" class="solution">
-
-            <div class="solution-number">
-                01
-            </div>
-
-            <div class="solution-title">
-
-                <p class="tag">
-                    ZYNK HOME
-                </p>
-
-                <h3>
-                    Uma casa que
-                    <span>entende você.</span>
-                </h3>
-
-            </div>
-
-            <div class="solution-text">
-
-                <p>
-                    A automação residencial permite integrar
-                    diferentes dispositivos da casa para criar
-                    ambientes mais inteligentes, confortáveis
-                    e eficientes.
-                </p>
-
-                <ul>
-                    <li>Iluminação inteligente</li>
-                    <li>Controle de ambientes</li>
-                    <li>Segurança</li>
-                    <li>Integração de dispositivos</li>
-                </ul>
-
-            </div>
-
-        </article>
-
-
-        <!-- INDUSTRIAL -->
-
-        <article id="industrial" class="solution">
-
-            <div class="solution-number">
-                02
-            </div>
-
-            <div class="solution-title">
-
-                <p class="tag">
-                    ZYNK INDUSTRY
-                </p>
-
-                <h3>
-                    Processos mais
-                    <span>inteligentes.</span>
-                </h3>
-
-            </div>
-
-            <div class="solution-text">
-
-                <p>
-                    Desenvolvemos soluções para automatizar,
-                    monitorar e integrar processos industriais,
-                    buscando mais eficiência e controle.
-                </p>
-
-                <ul>
-                    <li>Monitoramento</li>
-                    <li>Controle de processos</li>
-                    <li>Integração de sistemas</li>
-                    <li>Projetos personalizados</li>
-                </ul>
-
-            </div>
-
-        </article>
-
-
-        <!-- SITES -->
-
-        <article id="sites" class="solution">
-
-            <div class="solution-number">
-                03
-            </div>
-
-            <div class="solution-title">
-
-                <p class="tag">
-                    ZYNK WEB
-                </p>
-
-                <h3>
-                    Sua empresa na
-                    <span>internet.</span>
-                </h3>
-
-            </div>
-
-            <div class="solution-text">
-
-                <p>
-                    Desenvolvemos sites modernos e responsivos
-                    para empresas que desejam fortalecer sua
-                    presença digital.
-                </p>
-
-                <ul>
-                    <li>Sites institucionais</li>
-                    <li>Landing pages</li>
-                    <li>Design responsivo</li>
-                    <li>Projetos personalizados</li>
-                </ul>
-
-            </div>
-
-        </article>
-
-    </section>
 
 
     <!-- ================= PROJETOS FUTUROS ================= -->
@@ -392,7 +466,9 @@
 
             <div class="project-card large">
 
-                <span>PROJETO 01</span>
+                <span>
+                    PROJETO 01
+                </span>
 
                 <h3>
                     Em breve
@@ -407,7 +483,9 @@
 
             <div class="project-card">
 
-                <span>PROJETO 02</span>
+                <span>
+                    PROJETO 02
+                </span>
 
                 <h3>
                     Em breve
@@ -422,7 +500,9 @@
 
             <div class="project-card">
 
-                <span>PARCERIAS</span>
+                <span>
+                    PARCERIAS
+                </span>
 
                 <h3>
                     Em breve
@@ -438,6 +518,7 @@
         </div>
 
     </section>
+
 
 
     <!-- ================= HISTÓRIA ================= -->
@@ -484,21 +565,32 @@
 
             <div class="history-line">
 
-                <span>IDEIA</span>
+                <span>
+                    IDEIA
+                </span>
 
-                <strong>→</strong>
+                <strong>
+                    →
+                </strong>
 
-                <span>INOVAÇÃO</span>
+                <span>
+                    INOVAÇÃO
+                </span>
 
-                <strong>→</strong>
+                <strong>
+                    →
+                </strong>
 
-                <span>FUTURO</span>
+                <span>
+                    FUTURO
+                </span>
 
             </div>
 
         </div>
 
     </section>
+
 
 
     <!-- ================= CONTATO ================= -->
@@ -526,10 +618,16 @@
 
         <div class="contact-list">
 
-            <a href="mailto:contato@zynkautomacoes.com"
-               class="contact-item">
 
-                <span>E-MAIL</span>
+            <!-- E-MAIL -->
+
+            <a
+                href="mailto:contato@zynkautomacoes.com"
+                class="contact-item">
+
+                <span>
+                    E-MAIL
+                </span>
 
                 <strong>
                     contato@zynkautomacoes.com
@@ -542,13 +640,20 @@
             </a>
 
 
-            <a href="#"
-               class="contact-item">
+            <!-- WHATSAPP -->
 
-                <span>WHATSAPP</span>
+            <a
+                href="https://wa.me/5515988156277"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item">
+
+                <span>
+                    WHATSAPP
+                </span>
 
                 <strong>
-                    Fale com a Zynk
+                    +55 (15) 98815-6277
                 </strong>
 
                 <small>
@@ -558,13 +663,20 @@
             </a>
 
 
-            <a href="#"
-               class="contact-item">
+            <!-- INSTAGRAM -->
 
-                <span>INSTAGRAM</span>
+            <a
+                href="https://www.instagram.com/zynk.automacoes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item">
+
+                <span>
+                    INSTAGRAM
+                </span>
 
                 <strong>
-                    @zynkautomacoes
+                    @Zynk.Automações
                 </strong>
 
                 <small>
@@ -576,6 +688,7 @@
         </div>
 
     </section>
+
 
 
     <!-- ================= FOOTER ================= -->
@@ -600,4 +713,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

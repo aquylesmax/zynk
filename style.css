@@ -7,23 +7,17 @@
 
 :root {
 
-    --background: #05070b;
+    --bg: #05070b;
+    --bg-secondary: #0b0f16;
+    --card: #101722;
 
-    --background-secondary: #080c13;
+    --text: #ffffff;
+    --muted: #9ca7b7;
 
-    --card: #0c1119;
+    --line: #1b2635;
 
-    --text: #f4f7fb;
-
-    --gray: #8994a5;
-
-    --line: rgba(255,255,255,0.09);
-
-    --blue: #35e8ff;
-
-    --purple: #8a5cff;
-
-    --max-width: 1200px;
+    --cyan: #008CFF;
+    --purple: #006BFF;
 
 }
 
@@ -31,7 +25,6 @@
 * {
 
     margin: 0;
-
     padding: 0;
 
     box-sizing: border-box;
@@ -48,7 +41,7 @@ html {
 
 body {
 
-    background: var(--background);
+    background: var(--bg);
 
     color: var(--text);
 
@@ -68,6 +61,14 @@ a {
 }
 
 
+button {
+
+    font-family: inherit;
+
+}
+
+
+
 /* ================= HEADER ================= */
 
 .header {
@@ -77,7 +78,6 @@ a {
     position: fixed;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
@@ -103,20 +103,20 @@ a {
 
 .logo {
 
-    font-family: "Space Grotesk";
+    display: flex;
 
-    font-size: 23px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
+    align-items: center;
 
 }
 
 
-.logo strong {
+.logo img {
 
-    color: var(--blue);
+    width: 150px;
+
+    height: auto;
+
+    display: block;
 
 }
 
@@ -143,7 +143,7 @@ a {
 
 .header nav a:hover {
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
 
@@ -163,11 +163,12 @@ a {
 
 .header-button:hover {
 
-    border-color: var(--blue);
+    border-color: var(--cyan);
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
+
 
 
 /* ================= HERO ================= */
@@ -234,7 +235,7 @@ a {
 
 .tag {
 
-    color: var(--blue);
+    color: var(--cyan);
 
     font-size: 11px;
 
@@ -264,14 +265,14 @@ a {
 
 .hero h1 span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
 
 
 .hero-description {
 
-    color: var(--gray);
+    color: var(--muted);
 
     max-width: 570px;
 
@@ -310,7 +311,7 @@ a {
 
 .primary {
 
-    background: var(--blue);
+    background: var(--cyan);
 
     color: #031016;
 
@@ -321,16 +322,18 @@ a {
 
     transform: translateY(-3px);
 
-    box-shadow: 0 10px 40px rgba(53,232,255,0.2);
+    box-shadow:
+        0 10px 40px rgba(0,140,255,0.2);
 
 }
 
 
 .secondary:hover {
 
-    border-color: var(--blue);
+    border-color: var(--cyan);
 
 }
+
 
 
 /* ================= HERO VISUAL ================= */
@@ -358,13 +361,13 @@ a {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(53,232,255,0.4);
+    border: 1px solid rgba(0,140,255,0.4);
 
     box-shadow:
 
-        0 0 80px rgba(53,232,255,0.1),
+        0 0 80px rgba(0,140,255,0.1),
 
-        inset 0 0 80px rgba(138,92,255,0.08);
+        inset 0 0 80px rgba(0,107,255,0.08);
 
     position: relative;
 
@@ -381,7 +384,7 @@ a {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(53,232,255,0.2);
+    border: 1px solid rgba(0,140,255,0.2);
 
 }
 
@@ -396,7 +399,7 @@ a {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(53,232,255,0.2);
+    border: 1px solid rgba(0,140,255,0.2);
 
 }
 
@@ -420,7 +423,7 @@ a {
 
 .tech-card span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
     font-size: 10px;
 
@@ -465,11 +468,477 @@ a {
 }
 
 
+
+/* ================= SEÇÃO DE SETORES ================= */
+
+.sector-section {
+
+    padding: 120px 5%;
+
+    max-width: 1600px;
+
+    margin: auto;
+
+}
+
+
+.sector-header {
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.65fr;
+
+    gap: 70px;
+
+    align-items: end;
+
+    margin-bottom: 50px;
+
+}
+
+
+.sector-header h2 {
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+}
+
+
+.sector-header h2 span {
+
+    color: var(--cyan);
+
+}
+
+
+.sector-header > p {
+
+    color: var(--muted);
+
+    max-width: 500px;
+
+}
+
+
+
+/* ================= ABAS ================= */
+
+.sector-tabs {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0;
+
+    border-bottom: 1px solid var(--line);
+
+    margin-bottom: 20px;
+
+    overflow-x: auto;
+
+}
+
+
+.sector-tab {
+
+    position: relative;
+
+    border: none;
+
+    background: transparent;
+
+    color: #687383;
+
+    padding: 20px 30px 18px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+
+}
+
+
+.sector-tab:first-child {
+
+    padding-left: 0;
+
+}
+
+
+.sector-tab:hover {
+
+    color: white;
+
+}
+
+
+.sector-tab.active {
+
+    color: white;
+
+}
+
+
+.sector-tab::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+
+    right: 30px;
+
+    bottom: -1px;
+
+    height: 2px;
+
+    background: var(--cyan);
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition: 0.3s;
+
+}
+
+
+.sector-tab:first-child::after {
+
+    left: 0;
+
+}
+
+
+.sector-tab.active::after {
+
+    transform: scaleX(1);
+
+}
+
+
+.tab-number {
+
+    color: var(--cyan);
+
+    font-size: 10px;
+
+    margin-right: 10px;
+
+    font-family: "Space Grotesk";
+
+}
+
+
+
+/* ================= ÁREA DO CONTEÚDO ================= */
+
+.sector-display {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background: #020407;
+
+    border: 1px solid var(--line);
+
+}
+
+
+/* ================= PAINÉIS ================= */
+
+.sector-panel {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.6s ease,
+        visibility 0.6s ease;
+
+}
+
+
+.sector-panel.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+
+/* ================= VÍDEO ================= */
+
+.sector-video {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 1;
+
+    background: #020407;
+
+}
+
+
+
+/* ================= OVERLAY ================= */
+
+.sector-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(3,6,10,0.96) 0%,
+            rgba(3,6,10,0.82) 35%,
+            rgba(3,6,10,0.42) 70%,
+            rgba(3,6,10,0.72) 100%
+        ),
+
+        linear-gradient(
+            0deg,
+            rgba(3,6,10,0.95) 0%,
+            transparent 45%,
+            rgba(3,6,10,0.35) 100%
+        );
+
+}
+
+
+
+/* ================= CONTEÚDO SOBRE O VÍDEO ================= */
+
+.sector-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    height: 100%;
+
+    min-height: 680px;
+
+    padding: 55px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.sector-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.sector-number {
+
+    font-family: "Space Grotesk";
+
+    font-size: 13px;
+
+    color: var(--cyan);
+
+}
+
+
+.sector-category {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: rgba(255,255,255,0.5);
+
+}
+
+
+.sector-main-text {
+
+    max-width: 700px;
+
+}
+
+
+.sector-small-title {
+
+    color: var(--cyan);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+
+.sector-main-text h3 {
+
+    font-family: "Space Grotesk";
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    line-height: 0.98;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.sector-main-text h3 span {
+
+    color: var(--cyan);
+
+}
+
+
+.sector-description {
+
+    color: #c1c8d2;
+
+    max-width: 600px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+
+}
+
+
+.sector-list {
+
+    list-style: none;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px 25px;
+
+}
+
+
+.sector-list li {
+
+    color: #e0e5ec;
+
+    font-size: 12px;
+
+}
+
+
+.sector-list li::before {
+
+    content: "+";
+
+    color: var(--cyan);
+
+    margin-right: 8px;
+
+    font-weight: 700;
+
+}
+
+
+
+/* ================= EFEITO DO PAINEL ================= */
+
+.sector-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -150px;
+
+    bottom: -200px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(0,140,255,0.18);
+
+    box-shadow:
+        0 0 100px rgba(0,140,255,0.08);
+
+    z-index: 3;
+
+    pointer-events: none;
+
+}
+
+
+
 /* ================= SECTIONS ================= */
 
 .section {
 
-    max-width: var(--max-width);
+    max-width: 1500px;
 
     margin: auto;
 
@@ -508,260 +977,17 @@ a {
 
 .section-header h2 span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
 
 
 .section-header > p {
 
-    color: var(--gray);
+    color: var(--muted);
 
 }
 
-
-/* ================= SERVICES ================= */
-
-.services {
-
-    display: grid;
-
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 15px;
-
-}
-
-
-.service {
-
-    min-height: 360px;
-
-    padding: 30px;
-
-    position: relative;
-
-    background: linear-gradient(
-        145deg,
-        #0c1119,
-        #080b11
-    );
-
-    border: 1px solid var(--line);
-
-    transition: 0.3s;
-
-}
-
-
-.service:hover {
-
-    transform: translateY(-6px);
-
-    border-color: rgba(53,232,255,0.4);
-
-}
-
-
-.service.featured {
-
-    border-color: rgba(53,232,255,0.3);
-
-}
-
-
-.service-number {
-
-    position: absolute;
-
-    top: 25px;
-
-    right: 25px;
-
-    color: #566170;
-
-    font-size: 12px;
-
-}
-
-
-.service-icon {
-
-    color: var(--blue);
-
-    font-family: "Space Grotesk";
-
-    font-size: 26px;
-
-    margin-bottom: 70px;
-
-}
-
-
-.service h3 {
-
-    font-family: "Space Grotesk";
-
-    font-size: 25px;
-
-}
-
-
-.service p {
-
-    color: var(--gray);
-
-    font-size: 14px;
-
-    margin: 15px 0 30px;
-
-}
-
-
-.service a {
-
-    color: var(--blue);
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-}
-
-
-/* ================= SOLUTIONS ================= */
-
-.solutions {
-
-    background: var(--background-secondary);
-
-    border-top: 1px solid var(--line);
-
-    border-bottom: 1px solid var(--line);
-
-    padding: 100px 5%;
-
-}
-
-
-.solutions-title {
-
-    max-width: var(--max-width);
-
-    margin: auto;
-
-    margin-bottom: 70px;
-
-}
-
-
-.solutions-title h2 {
-
-    font-family: "Space Grotesk";
-
-    font-size: clamp(40px,5vw,65px);
-
-    line-height: 1;
-
-}
-
-
-.solutions-title h2 span {
-
-    color: var(--blue);
-
-}
-
-
-.solution {
-
-    max-width: var(--max-width);
-
-    margin: auto;
-
-    padding: 75px 0;
-
-    display: grid;
-
-    grid-template-columns: 80px 1fr 1fr;
-
-    gap: 30px;
-
-    border-bottom: 1px solid var(--line);
-
-}
-
-
-.solution:last-child {
-
-    border-bottom: none;
-
-}
-
-
-.solution-number {
-
-    color: var(--blue);
-
-    font-family: "Space Grotesk";
-
-}
-
-
-.solution-title h3 {
-
-    font-family: "Space Grotesk";
-
-    font-size: 42px;
-
-    line-height: 1.05;
-
-}
-
-
-.solution-title h3 span {
-
-    color: var(--blue);
-
-}
-
-
-.solution-text {
-
-    color: var(--gray);
-
-    font-size: 14px;
-
-}
-
-
-.solution-text ul {
-
-    list-style: none;
-
-    margin-top: 25px;
-
-}
-
-
-.solution-text li {
-
-    color: #c7ced8;
-
-    margin-bottom: 8px;
-
-}
-
-
-.solution-text li::before {
-
-    content: "+";
-
-    color: var(--blue);
-
-    margin-right: 8px;
-
-}
 
 
 /* ================= PROJECTS ================= */
@@ -785,11 +1011,12 @@ a {
 
     border: 1px solid var(--line);
 
-    background: linear-gradient(
-        135deg,
-        #0b1018,
-        #07090e
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #0b1018,
+            #07090e
+        );
 
     display: flex;
 
@@ -800,6 +1027,17 @@ a {
     position: relative;
 
     overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+.project-card:hover {
+
+    border-color: rgba(0,140,255,0.35);
+
+    transform: translateY(-4px);
 
 }
 
@@ -813,7 +1051,7 @@ a {
 
 .project-card span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
     font-size: 10px;
 
@@ -835,11 +1073,12 @@ a {
 
 .project-card p {
 
-    color: var(--gray);
+    color: var(--muted);
 
     font-size: 12px;
 
 }
+
 
 
 /* ================= HISTORY ================= */
@@ -885,14 +1124,14 @@ a {
 
 .history h2 span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
 
 
 .history-content > p:not(.tag) {
 
-    color: var(--gray);
+    color: var(--muted);
 
     font-size: 15px;
 
@@ -918,7 +1157,7 @@ a {
 
     gap: 18px;
 
-    color: var(--blue);
+    color: var(--cyan);
 
     font-family: "Space Grotesk";
 
@@ -939,6 +1178,7 @@ a {
     font-size: 25px;
 
 }
+
 
 
 /* ================= CONTACT ================= */
@@ -967,14 +1207,14 @@ a {
 
 .contact-title h2 span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
 
 
 .contact-title > p:last-child {
 
-    color: var(--gray);
+    color: var(--muted);
 
     margin-top: 25px;
 
@@ -1009,7 +1249,7 @@ a {
 
 .contact-item:hover {
 
-    border-color: rgba(53,232,255,0.4);
+    border-color: rgba(0,140,255,0.4);
 
     background: #090e15;
 
@@ -1018,7 +1258,7 @@ a {
 
 .contact-item span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
     font-size: 9px;
 
@@ -1045,6 +1285,7 @@ a {
     margin-top: 10px;
 
 }
+
 
 
 /* ================= FOOTER ================= */
@@ -1085,9 +1326,10 @@ footer {
 
 .footer-logo span {
 
-    color: var(--blue);
+    color: var(--cyan);
 
 }
+
 
 
 /* ================= RESPONSIVIDADE ================= */
@@ -1122,7 +1364,7 @@ footer {
     }
 
 
-    .section-header {
+    .sector-header {
 
         grid-template-columns: 1fr;
 
@@ -1131,9 +1373,25 @@ footer {
     }
 
 
-    .services {
+    .sector-display {
 
-        grid-template-columns: 1fr;
+        min-height: 650px;
+
+    }
+
+
+    .sector-content {
+
+        min-height: 650px;
+
+        padding: 40px;
+
+    }
+
+
+    .sector-main-text h3 {
+
+        font-size: 55px;
 
     }
 
@@ -1141,20 +1399,6 @@ footer {
     .project-grid {
 
         grid-template-columns: 1fr;
-
-    }
-
-
-    .solution {
-
-        grid-template-columns: 50px 1fr;
-
-    }
-
-
-    .solution-text {
-
-        grid-column: 2;
 
     }
 
@@ -1182,6 +1426,7 @@ footer {
 }
 
 
+
 @media (max-width: 550px) {
 
     .hero h1 {
@@ -1202,16 +1447,141 @@ footer {
     }
 
 
-    .solution-title h3 {
+    .sector-section {
 
-        font-size: 34px;
+        padding: 90px 4%;
 
     }
 
 
-    .solution-text ul {
+    .sector-tabs {
+
+        margin-left: -4%;
+
+        margin-right: -4%;
+
+        padding-left: 4%;
+
+    }
+
+
+    .sector-tab {
+
+        padding: 18px 22px 16px;
+
+        font-size: 11px;
+
+    }
+
+
+    .sector-tab:first-child {
+
+        padding-left: 0;
+
+    }
+
+
+    .sector-tab::after {
+
+        left: 22px;
+
+        right: 22px;
+
+    }
+
+
+    .sector-tab:first-child::after {
+
+        left: 0;
+
+    }
+
+
+    .sector-display {
+
+        min-height: 650px;
+
+    }
+
+
+    .sector-content {
+
+        min-height: 650px;
+
+        padding: 30px 25px;
+
+    }
+
+
+    .sector-category {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .sector-main-text h3 {
+
+        font-size: 42px;
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .sector-description {
 
         font-size: 13px;
+
+    }
+
+
+    .sector-list {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .sector-list li {
+
+        font-size: 10px;
+
+    }
+
+
+    .section {
+
+        padding: 90px 5%;
+
+    }
+
+
+    .section-header {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+    }
+
+
+    .history {
+
+        padding: 90px 5%;
+
+    }
+
+
+    .history-line {
+
+        flex-wrap: wrap;
 
     }
 

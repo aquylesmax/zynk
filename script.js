@@ -4,16 +4,17 @@
 // ==========================================
 
 
-// Efeito de aparecimento dos elementos
-// quando entram na tela
+
+// ==========================================
+// EFEITO DE APARECIMENTO DOS ELEMENTOS
+// ==========================================
 
 const elements = document.querySelectorAll(
-    '.service, .solution, .project-card, .contact-item'
+    '.sector-section, .project-card, .contact-item, .history-content'
 );
 
 
 const observer = new IntersectionObserver(
-
     (entries) => {
 
         entries.forEach((entry) => {
@@ -30,15 +31,11 @@ const observer = new IntersectionObserver(
         });
 
     },
-
     {
         threshold: 0.15
     }
-
 );
 
-
-// Configuração inicial
 
 elements.forEach((element) => {
 
@@ -55,11 +52,13 @@ elements.forEach((element) => {
 });
 
 
+
 // ==========================================
-// EFEITO NO HEADER DURANTE O SCROLL
+// HEADER DURANTE O SCROLL
 // ==========================================
 
-const header = document.querySelector(".header");
+const header =
+    document.querySelector(".header");
 
 
 window.addEventListener("scroll", () => {
@@ -77,3 +76,192 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+
+
+// ==========================================
+// SISTEMA DE ABAS DOS SETORES
+// ==========================================
+
+const sectorTabs =
+    document.querySelectorAll(".sector-tab");
+
+
+const sectorPanels =
+    document.querySelectorAll(".sector-panel");
+
+
+
+function changeSector(selectedSector) {
+
+    // -------------------------------
+    // ALTERA A ABA ATIVA
+    // -------------------------------
+
+    sectorTabs.forEach((tab) => {
+
+        const isActive =
+            tab.dataset.sector === selectedSector;
+
+        tab.classList.toggle(
+            "active",
+            isActive
+        );
+
+        tab.setAttribute(
+            "aria-selected",
+            isActive
+        );
+
+    });
+
+
+    // -------------------------------
+    // ALTERA O PAINEL
+    // -------------------------------
+
+    sectorPanels.forEach((panel) => {
+
+        const isActive =
+            panel.dataset.panel === selectedSector;
+
+
+        panel.classList.toggle(
+            "active",
+            isActive
+        );
+
+
+        const video =
+            panel.querySelector(".sector-video");
+
+
+        if (!video) return;
+
+
+        if (isActive) {
+
+            // Reinicia o vídeo
+            video.currentTime = 0;
+
+            // Tenta iniciar automaticamente
+            video.play().catch(() => {});
+
+        } else {
+
+            // Pausa os outros vídeos
+            video.pause();
+
+        }
+
+    });
+
+}
+
+
+
+// ==========================================
+// CLIQUE NAS ABAS
+// ==========================================
+
+sectorTabs.forEach((tab) => {
+
+    tab.addEventListener("click", () => {
+
+        const selectedSector =
+            tab.dataset.sector;
+
+
+        changeSector(selectedSector);
+
+    });
+
+});
+
+
+
+// ==========================================
+// INICIA O PRIMEIRO VÍDEO
+// ==========================================
+
+const firstVideo =
+    document.querySelector(
+        '.sector-panel.active .sector-video'
+    );
+
+
+if (firstVideo) {
+
+    firstVideo.play().catch(() => {});
+
+}
+
+
+
+// ==========================================
+// PAUSAR VÍDEOS QUANDO A SEÇÃO
+// SAI DA TELA
+// ==========================================
+
+const sectorSection =
+    document.querySelector(".sector-section");
+
+
+if (sectorSection) {
+
+    const sectorObserver =
+        new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    const videos =
+                        document.querySelectorAll(
+                            ".sector-video"
+                        );
+
+
+                    videos.forEach((video) => {
+
+                        if (entry.isIntersecting) {
+
+                            const panel =
+                                video.closest(
+                                    ".sector-panel"
+                                );
+
+
+                            if (
+                                panel &&
+                                panel.classList.contains("active")
+                            ) {
+
+                                video.play().catch(
+                                    () => {}
+                                );
+
+                            }
+
+                        } else {
+
+                            video.pause();
+
+                        }
+
+                    });
+
+                });
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+    sectorObserver.observe(sectorSection);
+
+}
