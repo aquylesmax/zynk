@@ -4,7 +4,6 @@
 // ==========================================
 
 
-
 // ==========================================
 // EFEITO DE APARECIMENTO DOS ELEMENTOS
 // ==========================================
@@ -12,7 +11,6 @@
 const elements = document.querySelectorAll(
     '.sector-section, .project-card, .contact-item, .history-content'
 );
-
 
 const observer = new IntersectionObserver(
     (entries) => {
@@ -52,7 +50,6 @@ elements.forEach((element) => {
 });
 
 
-
 // ==========================================
 // HEADER DURANTE O SCROLL
 // ==========================================
@@ -62,6 +59,9 @@ const header =
 
 
 window.addEventListener("scroll", () => {
+
+    if (!header) return;
+
 
     if (window.scrollY > 50) {
 
@@ -78,7 +78,6 @@ window.addEventListener("scroll", () => {
 });
 
 
-
 // ==========================================
 // SISTEMA DE ABAS DOS SETORES
 // ==========================================
@@ -91,22 +90,24 @@ const sectorPanels =
     document.querySelectorAll(".sector-panel");
 
 
-
 function changeSector(selectedSector) {
 
-    // -------------------------------
+
+    // --------------------------------------
     // ALTERA A ABA ATIVA
-    // -------------------------------
+    // --------------------------------------
 
     sectorTabs.forEach((tab) => {
 
         const isActive =
             tab.dataset.sector === selectedSector;
 
+
         tab.classList.toggle(
             "active",
             isActive
         );
+
 
         tab.setAttribute(
             "aria-selected",
@@ -116,9 +117,9 @@ function changeSector(selectedSector) {
     });
 
 
-    // -------------------------------
-    // ALTERA O PAINEL
-    // -------------------------------
+    // --------------------------------------
+    // ALTERA O PAINEL E O VÍDEO
+    // --------------------------------------
 
     sectorPanels.forEach((panel) => {
 
@@ -141,15 +142,14 @@ function changeSector(selectedSector) {
 
         if (isActive) {
 
-            // Reinicia o vídeo
             video.currentTime = 0;
 
-            // Tenta iniciar automaticamente
+            video.muted = true;
+
             video.play().catch(() => {});
 
         } else {
 
-            // Pausa os outros vídeos
             video.pause();
 
         }
@@ -157,7 +157,6 @@ function changeSector(selectedSector) {
     });
 
 }
-
 
 
 // ==========================================
@@ -179,7 +178,6 @@ sectorTabs.forEach((tab) => {
 });
 
 
-
 // ==========================================
 // INICIA O PRIMEIRO VÍDEO
 // ==========================================
@@ -192,15 +190,15 @@ const firstVideo =
 
 if (firstVideo) {
 
+    firstVideo.muted = true;
+
     firstVideo.play().catch(() => {});
 
 }
 
 
-
 // ==========================================
-// PAUSAR VÍDEOS QUANDO A SEÇÃO
-// SAI DA TELA
+// PAUSAR VÍDEOS QUANDO A SEÇÃO SAI DA TELA
 // ==========================================
 
 const sectorSection =
@@ -209,12 +207,14 @@ const sectorSection =
 
 if (sectorSection) {
 
+
     const sectorObserver =
         new IntersectionObserver(
-
             (entries) => {
 
+
                 entries.forEach((entry) => {
+
 
                     const videos =
                         document.querySelectorAll(
@@ -224,12 +224,14 @@ if (sectorSection) {
 
                     videos.forEach((video) => {
 
-                        if (entry.isIntersecting) {
 
-                            const panel =
-                                video.closest(
-                                    ".sector-panel"
-                                );
+                        const panel =
+                            video.closest(
+                                ".sector-panel"
+                            );
+
+
+                        if (entry.isIntersecting) {
 
 
                             if (
@@ -237,11 +239,14 @@ if (sectorSection) {
                                 panel.classList.contains("active")
                             ) {
 
+                                video.muted = true;
+
                                 video.play().catch(
                                     () => {}
                                 );
 
                             }
+
 
                         } else {
 
@@ -254,14 +259,14 @@ if (sectorSection) {
                 });
 
             },
-
             {
                 threshold: 0.15
             }
-
         );
 
 
-    sectorObserver.observe(sectorSection);
+    sectorObserver.observe(
+        sectorSection
+    );
 
 }
