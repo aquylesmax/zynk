@@ -3,7 +3,9 @@
 );
 
 
-/* ================= CONFIGURAÇÕES ================= */
+/* =====================================================
+   CONFIGURAÇÕES
+===================================================== */
 
 :root {
 
@@ -49,6 +51,8 @@ body {
 
     line-height: 1.6;
 
+    overflow-x: hidden;
+
 }
 
 
@@ -61,15 +65,65 @@ a {
 }
 
 
-button {
+button,
+input,
+textarea {
 
     font-family: inherit;
 
 }
 
 
+button {
 
-/* ================= HEADER ================= */
+    border: none;
+
+}
+
+
+input,
+textarea {
+
+    outline: none;
+
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #030509;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background: #172334;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--cyan);
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header {
 
@@ -82,7 +136,7 @@ button {
 
     width: 100%;
 
-    z-index: 100;
+    z-index: 1000;
 
     display: flex;
 
@@ -107,6 +161,8 @@ button {
 
     align-items: center;
 
+    z-index: 1002;
+
 }
 
 
@@ -121,7 +177,7 @@ button {
 }
 
 
-.header nav {
+.desktop-nav {
 
     display: flex;
 
@@ -130,7 +186,7 @@ button {
 }
 
 
-.header nav a {
+.desktop-nav a {
 
     font-size: 13px;
 
@@ -141,7 +197,7 @@ button {
 }
 
 
-.header nav a:hover {
+.desktop-nav a:hover {
 
     color: var(--cyan);
 
@@ -170,8 +226,149 @@ button {
 }
 
 
+/* =====================================================
+   MENU HAMBÚRGUER
+===================================================== */
 
-/* ================= HERO ================= */
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    z-index: 1002;
+
+}
+
+
+.menu-toggle span {
+
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background: white;
+
+    transition: 0.3s;
+
+}
+
+
+.menu-toggle.active span:nth-child(1) {
+
+    transform: translateY(7px) rotate(45deg);
+
+}
+
+
+.menu-toggle.active span:nth-child(2) {
+
+    opacity: 0;
+
+}
+
+
+.menu-toggle.active span:nth-child(3) {
+
+    transform: translateY(-7px) rotate(-45deg);
+
+}
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+.mobile-nav {
+
+    display: none;
+
+    position: absolute;
+
+    top: 80px;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 15px 5% 25px;
+
+    background: rgba(5,7,11,0.98);
+
+    backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+.mobile-nav.open {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.mobile-nav a {
+
+    padding: 16px 0;
+
+    color: #b7c0cc;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid rgba(27,38,53,0.6);
+
+    transition: 0.3s;
+
+}
+
+
+.mobile-nav a:hover {
+
+    color: var(--cyan);
+
+}
+
+
+.mobile-nav .mobile-contact-button {
+
+    margin-top: 15px;
+
+    padding: 14px 18px;
+
+    color: #031016;
+
+    background: var(--cyan);
+
+    border: none;
+
+    text-align: center;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero {
 
@@ -332,11 +529,14 @@ button {
 
     border-color: var(--cyan);
 
+    color: var(--cyan);
+
 }
 
 
-
-/* ================= HERO VISUAL ================= */
+/* =====================================================
+   HERO VISUAL
+===================================================== */
 
 .hero-visual {
 
@@ -468,8 +668,9 @@ button {
 }
 
 
-
-/* ================= SEÇÃO DE SETORES ================= */
+/* =====================================================
+   SETORES
+===================================================== */
 
 .sector-section {
 
@@ -526,8 +727,9 @@ button {
 }
 
 
-
-/* ================= ABAS ================= */
+/* =====================================================
+   ABAS DOS SETORES
+===================================================== */
 
 .sector-tabs {
 
@@ -542,6 +744,15 @@ button {
     margin-bottom: 20px;
 
     overflow-x: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.sector-tabs::-webkit-scrollbar {
+
+    display: none;
 
 }
 
@@ -567,6 +778,12 @@ button {
     white-space: nowrap;
 
     transition: 0.3s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
 
 }
 
@@ -599,7 +816,6 @@ button {
     position: absolute;
 
     left: 30px;
-
     right: 30px;
 
     bottom: -1px;
@@ -631,21 +847,58 @@ button {
 }
 
 
-.tab-number {
+/* ÍCONES */
+
+.tab-icon {
+
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.tab-icon svg {
+
+    width: 20px;
+    height: 20px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    transition: 0.3s;
+
+}
+
+
+.sector-tab.active .tab-icon {
 
     color: var(--cyan);
 
-    font-size: 10px;
+}
 
-    margin-right: 10px;
+
+.tab-text {
 
     font-family: "Space Grotesk";
 
 }
 
 
-
-/* ================= ÁREA DO CONTEÚDO ================= */
+/* =====================================================
+   ÁREA DO CONTEÚDO
+===================================================== */
 
 .sector-display {
 
@@ -664,7 +917,9 @@ button {
 }
 
 
-/* ================= PAINÉIS ================= */
+/* =====================================================
+   PAINÉIS
+===================================================== */
 
 .sector-panel {
 
@@ -696,8 +951,9 @@ button {
 }
 
 
-
-/* ================= VÍDEO ================= */
+/* =====================================================
+   VÍDEO
+===================================================== */
 
 .sector-video {
 
@@ -706,7 +962,6 @@ button {
     inset: 0;
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
@@ -715,11 +970,16 @@ button {
 
     background: #020407;
 
+    /* PRETO E BRANCO */
+
+    filter: grayscale(100%);
+
 }
 
 
-
-/* ================= OVERLAY ================= */
+/* =====================================================
+   OVERLAY
+===================================================== */
 
 .sector-overlay {
 
@@ -749,8 +1009,9 @@ button {
 }
 
 
-
-/* ================= CONTEÚDO SOBRE O VÍDEO ================= */
+/* =====================================================
+   CONTEÚDO SOBRE O VÍDEO
+===================================================== */
 
 .sector-content {
 
@@ -902,8 +1163,9 @@ button {
 }
 
 
-
-/* ================= EFEITO DO PAINEL ================= */
+/* =====================================================
+   EFEITO DO PAINEL
+===================================================== */
 
 .sector-panel::before {
 
@@ -912,11 +1174,9 @@ button {
     position: absolute;
 
     width: 500px;
-
     height: 500px;
 
     right: -150px;
-
     bottom: -200px;
 
     border-radius: 50%;
@@ -933,8 +1193,9 @@ button {
 }
 
 
-
-/* ================= SECTIONS ================= */
+/* =====================================================
+   SEÇÕES
+===================================================== */
 
 .section {
 
@@ -989,8 +1250,9 @@ button {
 }
 
 
-
-/* ================= PROJECTS ================= */
+/* =====================================================
+   PROJETOS
+===================================================== */
 
 .project-grid {
 
@@ -1012,6 +1274,7 @@ button {
     border: 1px solid var(--line);
 
     background:
+
         linear-gradient(
             135deg,
             #0b1018,
@@ -1080,8 +1343,9 @@ button {
 }
 
 
-
-/* ================= HISTORY ================= */
+/* =====================================================
+   HISTÓRIA
+===================================================== */
 
 .history {
 
@@ -1180,14 +1444,15 @@ button {
 }
 
 
-
-/* ================= CONTACT ================= */
+/* =====================================================
+   CONTATO
+===================================================== */
 
 .contact {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .8fr 1.2fr;
 
     gap: 80px;
 
@@ -1212,7 +1477,7 @@ button {
 }
 
 
-.contact-title > p:last-child {
+.contact-title > p:not(.tag) {
 
     color: var(--muted);
 
@@ -1223,18 +1488,24 @@ button {
 }
 
 
+/* =====================================================
+   CONTATOS DIRETOS
+===================================================== */
+
 .contact-list {
 
     display: grid;
 
     gap: 12px;
 
+    margin-top: 40px;
+
 }
 
 
 .contact-item {
 
-    padding: 25px;
+    padding: 22px;
 
     border: 1px solid var(--line);
 
@@ -1271,7 +1542,7 @@ button {
 
     font-family: "Space Grotesk";
 
-    font-size: 18px;
+    font-size: 16px;
 
     margin-top: 5px;
 
@@ -1282,13 +1553,308 @@ button {
 
     color: #697485;
 
-    margin-top: 10px;
+    margin-top: 8px;
 
 }
 
 
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
 
-/* ================= FOOTER ================= */
+.contact-form-wrapper {
+
+    border: 1px solid var(--line);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16,23,34,0.7),
+            rgba(5,7,11,0.95)
+        );
+
+    padding: 38px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.contact-form-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(0,140,255,0.15);
+
+    box-shadow:
+        0 0 80px rgba(0,140,255,0.05);
+
+    pointer-events: none;
+
+}
+
+
+.form-heading {
+
+    position: relative;
+
+    z-index: 1;
+
+    margin-bottom: 30px;
+
+}
+
+
+.form-heading > span {
+
+    color: var(--cyan);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+}
+
+
+.form-heading h3 {
+
+    font-family: "Space Grotesk";
+
+    font-size: 34px;
+
+    line-height: 1.05;
+
+    margin: 8px 0 12px;
+
+}
+
+
+.form-heading h3 strong {
+
+    color: var(--cyan);
+
+    font-weight: 600;
+
+}
+
+
+.form-heading p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    max-width: 600px;
+
+}
+
+
+.contact-form {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.form-group label {
+
+    color: #aeb8c7;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 7px;
+
+    font-weight: 600;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--line);
+
+    background: rgba(5,7,11,0.75);
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #536071;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: rgba(0,140,255,0.7);
+
+    box-shadow:
+        0 0 0 2px rgba(0,140,255,0.06);
+
+}
+
+
+.form-group input[readonly] {
+
+    color: #8f9aaa;
+
+    cursor: default;
+
+}
+
+
+.cep-row {
+
+    grid-template-columns: 1.4fr .6fr;
+
+}
+
+
+.cep-status {
+
+    min-height: 17px;
+
+    margin-top: 4px;
+
+    color: var(--cyan);
+
+    font-size: 9px;
+
+}
+
+
+.cep-status.error {
+
+    color: #ff6b6b;
+
+}
+
+
+.form-submit {
+
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 16px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--cyan);
+
+    color: #031016;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.form-submit:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(0,140,255,0.18);
+
+}
+
+
+.form-submit span {
+
+    font-size: 20px;
+
+}
+
+
+.form-note {
+
+    color: #596577;
+
+    font-size: 9px;
+
+    margin-top: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
 
@@ -1331,18 +1897,13 @@ footer {
 }
 
 
+/* =====================================================
+   RESPONSIVIDADE — TABLET / MOBILE
+===================================================== */
 
-/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 1000px) {
 
-@media (max-width: 900px) {
-
-    .header nav {
-
-        display: none;
-
-    }
-
-
+    .desktop-nav,
     .header-button {
 
         display: none;
@@ -1350,9 +1911,18 @@ footer {
     }
 
 
+    .menu-toggle {
+
+        display: flex;
+
+    }
+
+
     .hero {
 
         grid-template-columns: 1fr;
+
+        padding-top: 140px;
 
     }
 
@@ -1426,8 +1996,42 @@ footer {
 }
 
 
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
+
+    .header {
+
+        height: 70px;
+
+        padding: 0 5%;
+
+    }
+
+
+    .mobile-nav {
+
+        top: 70px;
+
+    }
+
+
+    .logo img {
+
+        width: 125px;
+
+    }
+
+
+    .hero {
+
+        padding:
+            130px 5% 60px;
+
+    }
+
 
     .hero h1 {
 
@@ -1438,11 +2042,19 @@ footer {
     }
 
 
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+
     .hero-visual {
 
         transform: scale(.8);
 
-        margin: -30px -40px;
+        margin:
+            -30px -40px;
 
     }
 
@@ -1467,7 +2079,8 @@ footer {
 
     .sector-tab {
 
-        padding: 18px 22px 16px;
+        padding:
+            18px 20px 16px;
 
         font-size: 11px;
 
@@ -1483,9 +2096,8 @@ footer {
 
     .sector-tab::after {
 
-        left: 22px;
-
-        right: 22px;
+        left: 20px;
+        right: 20px;
 
     }
 
@@ -1493,6 +2105,22 @@ footer {
     .sector-tab:first-child::after {
 
         left: 0;
+
+    }
+
+
+    .tab-icon {
+
+        width: 20px;
+        height: 20px;
+
+    }
+
+
+    .tab-icon svg {
+
+        width: 18px;
+        height: 18px;
 
     }
 
@@ -1558,7 +2186,8 @@ footer {
 
     .section {
 
-        padding: 90px 5%;
+        padding:
+            90px 5%;
 
     }
 
@@ -1574,7 +2203,8 @@ footer {
 
     .history {
 
-        padding: 90px 5%;
+        padding:
+            90px 5%;
 
     }
 
@@ -1586,6 +2216,42 @@ footer {
     }
 
 
+    .contact {
+
+        gap: 45px;
+
+    }
+
+
+    .contact-form-wrapper {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .form-heading h3 {
+
+        font-size: 29px;
+
+    }
+
+
+    .form-row,
+    .cep-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contact-list {
+
+        margin-top: 30px;
+
+    }
+
+
     footer {
 
         flex-direction: column;
@@ -1593,6 +2259,50 @@ footer {
         align-items: flex-start;
 
         gap: 12px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE PEQUENO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .sector-main-text h3 {
+
+        font-size: 37px;
+
+    }
+
+
+    .sector-content {
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .sector-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-heading h3 {
+
+        font-size: 26px;
 
     }
 
