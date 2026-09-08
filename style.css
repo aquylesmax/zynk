@@ -970,8 +970,6 @@ textarea {
 
     background: #020407;
 
-    /* PRETO E BRANCO */
-
     filter: grayscale(100%);
 
 }
@@ -1494,16 +1492,24 @@ textarea {
 
 .contact-list {
 
-    display: grid;
+    display: flex;
+
+    flex-direction: column;
 
     gap: 12px;
 
     margin-top: 40px;
 
+    width: 100%;
+
+    max-width: 520px;
+
 }
 
 
 .contact-item {
+
+    width: 100%;
 
     padding: 22px;
 
@@ -1512,6 +1518,8 @@ textarea {
     display: flex;
 
     flex-direction: column;
+
+    background: transparent;
 
     transition: 0.3s;
 
@@ -1554,6 +1562,117 @@ textarea {
     color: #697485;
 
     margin-top: 8px;
+
+}
+
+
+/* =====================================================
+   GRUPO DOS TELEFONES
+===================================================== */
+
+.contact-phone-group {
+
+    cursor: default;
+
+}
+
+
+.contact-phone-group:hover {
+
+    border-color: rgba(0,140,255,0.4);
+
+}
+
+
+.phone-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 8px;
+
+}
+
+
+.phone-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-top: 1px solid var(--line);
+
+    transition: 0.3s;
+
+}
+
+
+.phone-links a:first-child {
+
+    border-top: none;
+
+    padding-top: 8px;
+
+}
+
+
+.phone-links a:last-child {
+
+    padding-bottom: 4px;
+
+}
+
+
+.phone-links a:hover {
+
+    color: var(--cyan);
+
+}
+
+
+.phone-links a:hover strong {
+
+    color: var(--cyan);
+
+}
+
+
+.phone-links a:hover small {
+
+    color: var(--text);
+
+}
+
+
+.phone-links a strong {
+
+    margin-top: 0;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.phone-links a small {
+
+    margin-top: 0;
+
+    color: #697485;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
 
 }
 
@@ -2223,6 +2342,47 @@ footer {
     }
 
 
+    .contact-list {
+
+        margin-top: 30px;
+
+        max-width: 100%;
+
+    }
+
+
+    .contact-item {
+
+        padding: 20px;
+
+    }
+
+
+    .phone-links a {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+    }
+
+
+    .phone-links a strong {
+
+        font-size: 14px;
+
+    }
+
+
+    .phone-links a small {
+
+        font-size: 10px;
+
+    }
+
+
     .contact-form-wrapper {
 
         padding: 25px 20px;
@@ -2241,13 +2401,6 @@ footer {
     .cep-row {
 
         grid-template-columns: 1fr;
-
-    }
-
-
-    .contact-list {
-
-        margin-top: 30px;
 
     }
 
