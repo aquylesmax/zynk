@@ -1,4 +1,4 @@
-// =====================================================
+﻿// =====================================================
 // ZYNK TECH
 // JAVASCRIPT PRINCIPAL
 // =====================================================
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // MENU HAMBÚRGUER
+    // MENU HAMBÃšRGUER
     // =================================================
 
     const menuToggle =
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // ---------------------------------------------
-        // ALTERA O PAINEL E O VÍDEO
+        // ALTERA O PAINEL E O VÃDEO
         // ---------------------------------------------
 
         sectorPanels.forEach((panel) => {
@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // INICIA O PRIMEIRO VÍDEO
+    // INICIA O PRIMEIRO VÃDEO
     // =================================================
 
     const firstVideo =
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // PAUSAR VÍDEOS QUANDO SAEM DA TELA
+    // PAUSAR VÃDEOS QUANDO SAEM DA TELA
     // =================================================
 
     const sectorSection =
@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // FORMULÁRIO
+    // FORMULÃRIO
     // =================================================
 
     const form =
@@ -377,7 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // MÁSCARA DE TELEFONE
+    // MÃSCARA DE TELEFONE
     // =================================================
 
     if (telefoneInput) {
@@ -433,7 +433,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // MÁSCARA DE CEP
+    // MÃSCARA DE CEP
     // =================================================
 
     if (cepInput) {
@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 cepInput.value = value;
 
 
-                // Se tiver 8 números, busca automaticamente
+                // Se tiver 8 nÃºmeros, busca automaticamente
 
                 const cleanCep =
                     value.replace(/\D/g, "");
@@ -522,7 +522,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 cepStatus.textContent =
-                    "CEP não encontrado.";
+                    "CEP nÃ£o encontrado.";
 
                 cepStatus.classList.add(
                     "error"
@@ -537,13 +537,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             cepStatus.textContent =
-                "Endereço preenchido automaticamente.";
+                "EndereÃ§o preenchido automaticamente.";
 
 
         } catch (error) {
 
             cepStatus.textContent =
-                "Não foi possível consultar o CEP.";
+                "NÃ£o foi possÃ­vel consultar o CEP.";
 
             cepStatus.classList.add(
                 "error"
@@ -556,7 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // PREENCHER ENDEREÇO
+    // PREENCHER ENDEREÃ‡O
     // =================================================
 
     function preencherEndereco(data) {
@@ -610,7 +610,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // LIMPAR ENDEREÇO
+    // LIMPAR ENDEREÃ‡O
     // =================================================
 
     function limparEndereco() {
@@ -644,7 +644,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =================================================
-    // ENVIO DO FORMULÁRIO PARA WHATSAPP
+    // ENVIO DO FORMULÃRIO PARA WHATSAPP
     // =================================================
 
     if (form) {
@@ -707,7 +707,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 let texto =
 
-                    "Olá, Zynk! Gostaria de solicitar informações sobre um projeto.\n\n" +
+                    "OlÃ¡, Zynk! Gostaria de solicitar informaÃ§Ãµes sobre um projeto.\n\n" +
 
                     "*DADOS DO CLIENTE*\n" +
 
@@ -728,11 +728,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     `E-mail: ${email}\n\n` +
 
-                    "*ENDEREÇO*\n" +
+                    "*ENDEREÃ‡O*\n" +
 
                     `CEP: ${cep}\n` +
 
-                    `Endereço: ${endereco}, ${numero}\n` +
+                    `EndereÃ§o: ${endereco}, ${numero}\n` +
 
                     `Bairro: ${bairro}\n` +
 
