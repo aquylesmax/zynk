@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -21,10 +21,10 @@
         </a>
 
         <nav class="desktop-nav">
-            <a href="#inicio">Início</a>
-            <a href="#atuacao">Soluções</a>
+            <a href="#inicio">In?cio</a>
+            <a href="#atuacao">Solu??es</a>
             <a href="#projetos">Projetos</a>
-            <a href="#historia">História</a>
+            <a href="#historia">Hist?ria</a>
             <a href="#contato">Contato</a>
         </nav>
 
@@ -32,7 +32,7 @@
             Fale conosco
         </a>
 
-        <!-- MENU HAMBÚRGUER -->
+        <!-- MENU HAMB?RGUER -->
 
         <button
             class="menu-toggle"
@@ -50,14 +50,14 @@
 
         <nav class="mobile-nav">
 
-            <a href="#inicio">Início</a>
-            <a href="#atuacao">Soluções</a>
+            <a href="#inicio">In?cio</a>
+            <a href="#atuacao">Solu??es</a>
             <a href="#projetos">Projetos</a>
-            <a href="#historia">História</a>
+            <a href="#historia">Hist?ria</a>
             <a href="#contato">Contato</a>
 
             <a href="#contato" class="mobile-contact-button">
-                Fale conosco →
+                Fale conosco ?
             </a>
 
         </nav>
@@ -72,7 +72,7 @@
         <div class="hero-content">
 
             <p class="tag">
-                AUTOMAÇÃO • TECNOLOGIA • INOVAÇÃO
+                AUTOMA??O ? TECNOLOGIA ? INOVA??O
             </p>
 
             <h1>
@@ -81,14 +81,15 @@
             </h1>
 
             <p class="hero-description">
-                Desenvolvemos soluções inteligentes para residências e empresas que querem transformar ideias
+                Desenvolvemos solu??es inteligentes para resid?ncias,
+                ind?strias e empresas que querem transformar ideias
                 em tecnologia.
             </p>
 
             <div class="hero-buttons">
 
                 <a href="#atuacao" class="button primary">
-                    Conheça nossas soluções →
+                    Conhe?a nossas solu??es ?
                 </a>
 
                 <a href="#contato" class="button secondary">
@@ -104,86 +105,69 @@
 
         <div class="hero-visual">
 
-            <div class="showcase-browser">
+    <div class="showcase-browser">
 
-                <div class="showcase-topbar">
+        <div class="showcase-topbar">
+            <div class="browser-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-                    <div class="browser-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+            <div class="browser-address">
+                zynk.tech
+            </div>
 
-                    <div class="browser-address">
-                        zynk.tech
-                    </div>
+            <span class="showcase-status">
+                DIGITAL STUDIO
+            </span>
+        </div>
 
-                    <span class="showcase-status">
-                        DIGITAL STUDIO
-                    </span>
+        <div class="showcase-content">
 
+            <div class="showcase-heading">
+                <span>01 / ZYNK HOME</span>
+                <strong>Connected<br>Living.</strong>
+            </div>
+
+            <div class="showcase-grid">
+
+                <div class="showcase-panel showcase-panel-main">
+                    <span>SMART HOME</span>
+                    <strong>LIGHTING</strong>
+                    <div class="showcase-line"></div>
+                    <small>ACTIVE SYSTEM</small>
                 </div>
 
-                <div class="showcase-content">
-
-                    <div class="showcase-heading">
-                        <span>01 / ZYNK HOME</span>
-                        <strong>Connected<br>Living.</strong>
-                    </div>
-
-                    <div class="showcase-grid">
-
-                        <div class="showcase-panel showcase-panel-main">
-
-                            <span>SMART HOME</span>
-
-                            <strong>LIGHTING</strong>
-
-                            <div class="showcase-line"></div>
-
-                            <small>ACTIVE SYSTEM</small>
-
-                        </div>
-
-                        <div class="showcase-panel">
-
-                            <span>CLIMATE</span>
-
-                            <strong>22.4°</strong>
-
-                            <small>OPTIMIZED</small>
-
-                        </div>
-
-                        <div class="showcase-panel">
-
-                            <span>SYSTEM</span>
-
-                            <strong>ONLINE</strong>
-
-                            <small>CONNECTED</small>
-
-                        </div>
-
-                    </div>
-
+                <div class="showcase-panel">
+                    <span>CLIMATE</span>
+                    <strong>22.4?</strong>
+                    <small>OPTIMIZED</small>
                 </div>
 
-                <div class="showcase-footer">
-
-                    <span>TECHNOLOGY</span>
-                    <span>02 / ZYNK WEB</span>
-
+                <div class="showcase-panel">
+                    <span>SYSTEM</span>
+                    <strong>ONLINE</strong>
+                    <small>CONNECTED</small>
                 </div>
 
             </div>
 
         </div>
 
-    </section>
+        <div class="showcase-footer">
+            <span>TECHNOLOGY</span>
+            <span>02 / ZYNK WEB</span>
+        </div>
+
+    </div>
+
+</div>
+
+      </section>
 
 
-    <!-- ================= ÁREAS DE ATUAÇÃO ================= -->
+    <!-- ================= ?REAS DE ATUA??O ================= -->
 
     <section id="atuacao" class="sector-section">
 
@@ -192,19 +176,19 @@
             <div>
 
                 <p class="tag">
-                    ÁREAS DE ATUAÇÃO
+                    ?REAS DE ATUA??O
                 </p>
 
                 <h2>
                     Tecnologia aplicada
-                    <span>à realidade.</span>
+                    <span>? realidade.</span>
                 </h2>
 
             </div>
 
             <p>
-                Atuamos em diferentes áreas da tecnologia,
-                criando soluções personalizadas para cada
+                Atuamos em diferentes ?reas da tecnologia,
+                criando solu??es personalizadas para cada
                 necessidade.
             </p>
 
@@ -241,6 +225,9 @@
             </button>
 
 
+
+
+
             <!-- WEB -->
 
             <button
@@ -269,9 +256,9 @@
         </div>
 
 
-        <!-- ================= ÁREA DOS SETORES ================= -->
+        <!-- ================= ?REA DOS SETORES ================= -->
 
-        <div class="sector-display">
+                        <div class="sector-display">
 
             <!-- ================= RESIDENCIAL ================= -->
 
@@ -312,7 +299,7 @@
                     <div class="sector-main-text">
 
                         <p class="sector-small-title">
-                            AUTOMAÇÃO RESIDENCIAL
+                            AUTOMA??O RESIDENCIAL
                         </p>
 
                         <h3>
@@ -327,10 +314,10 @@
 
                         <ul class="sector-list">
 
-                            <li>Iluminação inteligente</li>
+                            <li>Ilumina??o inteligente</li>
                             <li>Controle de ambientes</li>
-                            <li>Automação residencial</li>
-                            <li>Soluções personalizadas</li>
+                            <li>Automa??o residencial</li>
+                            <li>Solu??es personalizadas</li>
 
                         </ul>
 
@@ -391,7 +378,7 @@
                         <p class="sector-description">
                             Desenvolvemos sites modernos e responsivos
                             para empresas que desejam fortalecer sua
-                            presença digital.
+                            presen?a digital.
                         </p>
 
                         <ul class="sector-list">
@@ -427,14 +414,14 @@
                 </p>
 
                 <h2>
-                    O próximo projeto
+                    O pr?ximo projeto
                     <span>pode ser nosso.</span>
                 </h2>
 
             </div>
 
             <p>
-                A Zynk está sempre buscando novas ideias,
+                A Zynk est? sempre buscando novas ideias,
                 tecnologias e oportunidades para expandir
                 seu ecossistema.
             </p>
@@ -455,7 +442,7 @@
                 </h3>
 
                 <p>
-                    Uma nova solução Zynk está sendo desenvolvida.
+                    Uma nova solu??o Zynk est? sendo desenvolvida.
                 </p>
 
             </div>
@@ -489,7 +476,7 @@
                 </h3>
 
                 <p>
-                    Novos projetos e empresas poderão
+                    Novos projetos e empresas poder?o
                     fazer parte da Zynk.
                 </p>
 
@@ -500,14 +487,14 @@
     </section>
 
 
-    <!-- ================= HISTÓRIA ================= -->
+    <!-- ================= HIST?RIA ================= -->
 
     <section id="historia" class="history">
 
         <div class="history-content">
 
             <p class="tag">
-                NOSSA HISTÓRIA
+                NOSSA HIST?RIA
             </p>
 
             <h2>
@@ -516,24 +503,25 @@
             </h2>
 
             <p>
-                A Zynk Tech nasceu com o propósito de
+                A Zynk Tech nasceu com o prop?sito de
                 aproximar pessoas e empresas das possibilidades
                 que a tecnologia oferece.
             </p>
 
             <p>
-                Nossa visão é desenvolver soluções inteligentes,
+                Nossa vis?o ? desenvolver solu??es inteligentes,
                 personalizadas e capazes de transformar a forma
                 como pessoas vivem e empresas trabalham.
             </p>
 
             <p>
-                Começamos com duas áreas de atuação: automação residencial
-                e desenvolvimento web.
+                Come?amos com tr?s ?reas de atua??o:
+                automa??o residencial e desenvolvimento web
+                e desenvolvimento de sites.
             </p>
 
             <p>
-                E esse é apenas o começo.
+                E esse ? apenas o come?o.
             </p>
 
         </div>
@@ -545,11 +533,11 @@
 
                 <span>IDEIA</span>
 
-                <strong>→</strong>
+                <strong>?</strong>
 
-                <span>INOVAÇÃO</span>
+                <span>INOVA??O</span>
 
-                <strong>→</strong>
+                <strong>?</strong>
 
                 <span>FUTURO</span>
 
@@ -577,7 +565,7 @@
 
             <p>
                 Entre em contato com a Zynk Tech
-                e conte-nos sobre seu próximo projeto.
+                e conte-nos sobre seu pr?ximo projeto.
             </p>
 
 
@@ -600,7 +588,7 @@
                     </strong>
 
                     <small>
-                        Enviar mensagem →
+                        Enviar mensagem ?
                     </small>
 
                 </a>
@@ -623,7 +611,7 @@
                     </strong>
 
                     <small>
-                        Iniciar conversa →
+                        Iniciar conversa ?
                     </small>
 
                 </a>
@@ -646,7 +634,7 @@
                     </strong>
 
                     <small>
-                        Iniciar conversa →
+                        Iniciar conversa ?
                     </small>
 
                 </a>
@@ -669,7 +657,7 @@
                     </strong>
 
                     <small>
-                        Iniciar conversa →
+                        Iniciar conversa ?
                     </small>
 
                 </a>
@@ -692,7 +680,7 @@
                     </strong>
 
                     <small>
-                        Acessar perfil →
+                        Acessar perfil ?
                     </small>
 
                 </a>
@@ -702,7 +690,7 @@
         </div>
 
 
-        <!-- ================= FORMULÁRIO ================= -->
+        <!-- ================= FORMUL?RIO ================= -->
 
         <div class="contact-form-wrapper">
 
@@ -718,8 +706,8 @@
                 </h3>
 
                 <p>
-                    Preencha os dados abaixo. O endereço será
-                    preenchido automaticamente através do CEP.
+                    Preencha os dados abaixo. O endere?o ser?
+                    preenchido automaticamente atrav?s do CEP.
                 </p>
 
             </div>
@@ -829,7 +817,7 @@
                     <div class="form-group number-field">
 
                         <label for="numero">
-                            Número *
+                            N?mero *
                         </label>
 
                         <input
@@ -930,7 +918,7 @@
                         id="mensagem"
                         name="mensagem"
                         rows="5"
-                        placeholder="Conte-nos o que você precisa..."
+                        placeholder="Conte-nos o que voc? precisa..."
                         required></textarea>
 
                 </div>
@@ -941,13 +929,13 @@
                     class="form-submit">
 
                     Enviar pelo WhatsApp
-                    <span>→</span>
+                    <span>?</span>
 
                 </button>
 
 
                 <p class="form-note">
-                    Ao enviar, você será direcionado para o WhatsApp
+                    Ao enviar, voc? ser? direcionado para o WhatsApp
                     da Zynk com os dados preenchidos.
                 </p>
 
@@ -971,7 +959,7 @@
         </p>
 
         <small>
-            © 2026 Zynk Tech
+            ? 2026 Zynk Tech
         </small>
 
     </footer>
@@ -982,3 +970,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
